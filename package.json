@@ -1,0 +1,70 @@
+{
+  "name": "vscode-prettier-bug",
+  "version": "0.1.0",
+  "description": "Vscode prettier bug",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/francoisromain/vscode-prettier-bug"
+  },
+  "author": {
+    "name": "François Romain",
+    "email": "francoisromain@gmail.com",
+    "url": "https://francoisromain.com"
+  },
+  "homepage": "https://github.com/francoisromain/vscode-prettier-bug",
+  "main": "index.js",
+  "scripts": {
+    "test:lint": "eslint --fix src/ && eslint --fix knex/"
+  },
+  "@comment dependencies": {
+    "graphql-import": "bloqué à 0.7.1: https://github.com/ardatan/graphql-import/issues/537",
+    "graphql": "bloqué à 14.6.0 à cause d'une erreur de type de graphql-fields"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^23.13.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "standard",
+      "prettier",
+      "prettier/@typescript-eslint",
+      "prettier/standard"
+    ],
+    "env": {
+      "node": true
+    },
+    "plugins": [
+      "prettier",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": 0,
+      "@typescript-eslint/explicit-module-boundary-types": 0,
+      "@typescript-eslint/no-empty-interface": 0,
+      "@typescript-eslint/no-explicit-any": 0,
+      "@typescript-eslint/no-non-null-assertion": 0,
+      "@typescript-eslint/no-use-before-define": 0,
+      "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/interface-name-prefix": 0,
+      "newline-before-return": 1
+    }
+  }
+}
